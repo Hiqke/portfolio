@@ -304,92 +304,56 @@ a, button {
   color: #ccc;
   margin-top: 10px;
 }
-/* ===== RESPONSIVO (CELULAR) ===== */
 /* ===== RESPONSIVO GLOBAL (CELULAR) ===== */
 @media (max-width: 768px) {
-
   body {
     overflow-x: hidden;
   }
 
-  /* NAVBAR */
+  /* NAVBAR CORRIGIDA */
   .navbar {
     padding: 15px 20px;
+    display: flex;
+    flex-direction: column; /* Empilha o logo e o menu */
+    align-items: center;
+    gap: 10px;
   }
 
+  /* Em vez de 'none', vamos organizar os links */
   .navbar nav {
-    display: none;
+    display: flex; 
+    flex-wrap: wrap; /* Se não couber, ele pula linha suavemente */
+    justify-content: center;
+    gap: 10px;
   }
 
-  /* HERO */
+  .navbar a {
+    margin: 5px; /* Ajusta o espaçamento lateral */
+    font-size: 14px;
+  }
+
+  /* HERO E OUTRAS SEÇÕES */
   .hero {
     min-height: 100vh;
-    padding: 120px 20px 60px;
+    padding: 140px 20px 60px; /* Aumentado para não sumir atrás da navbar */
     text-align: center;
-  }
-
-  .hero-content {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
   }
 
   .hero h1 {
-    font-size: 34px;
-  }
-
-  .hero h2 {
-    font-size: 18px;
-  }
-
-  .hero p {
-    font-size: 14px;
-    max-width: 90%;
-  }
-
-  .hero-img {
-    margin: 30px 0;
+    font-size: 32px; /* Ajuste para nomes longos como o seu */
+    line-height: 1.2;
   }
 
   .hero-img img {
-    width: 180px;
+    width: 200px;
+    height: 200px;
   }
 
-  /* SECTIONS (SOBRE, TEC, PROJETOS, CONTATO) */
-  .section {
-    padding: 70px 20px;
-    text-align: center;
-  }
-
-  .section h2 {
-    font-size: 26px;
-  }
-
-  .sub {
-    font-size: 14px;
-    margin-bottom: 30px;
-  }
-
-  /* GRID TEC */
   .tech-grid {
     grid-template-columns: repeat(2, 1fr);
   }
 
-  /* PROJETOS */
-  .projects-grid {
-    grid-template-columns: 1fr;
-  }
-
-  /* CARDS */
-  .card,
-  .project-card,
-  .tech {
-    width: 100%;
-  }
-
-  /* CONTATO */
-  .contato button {
-    width: 100%;
-    max-width: 280px;
+  .section {
+    padding: 60px 20px;
   }
 }
