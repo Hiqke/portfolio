@@ -305,7 +305,12 @@ a, button {
   margin-top: 10px;
 }
 /* ===== RESPONSIVO (CELULAR) ===== */
+/* ===== RESPONSIVO GLOBAL (CELULAR) ===== */
 @media (max-width: 768px) {
+
+  body {
+    overflow-x: hidden;
+  }
 
   /* NAVBAR */
   .navbar {
@@ -313,13 +318,13 @@ a, button {
   }
 
   .navbar nav {
-    display: none; /* esconde menu grande */
+    display: none;
   }
 
   /* HERO */
   .hero {
     min-height: 100vh;
-    padding: 120px 20px 40px;
+    padding: 120px 20px 60px;
     text-align: center;
   }
 
@@ -330,7 +335,7 @@ a, button {
   }
 
   .hero h1 {
-    font-size: 36px;
+    font-size: 34px;
   }
 
   .hero h2 {
@@ -339,9 +344,9 @@ a, button {
 
   .hero p {
     font-size: 14px;
+    max-width: 90%;
   }
 
-  /* FOTO */
   .hero-img {
     margin: 30px 0;
   }
@@ -350,8 +355,41 @@ a, button {
     width: 180px;
   }
 
-  /* SOCIAL */
-  .social {
-    margin-top: 20px;
+  /* SECTIONS (SOBRE, TEC, PROJETOS, CONTATO) */
+  .section {
+    padding: 70px 20px;
+    text-align: center;
+  }
+
+  .section h2 {
+    font-size: 26px;
+  }
+
+  .sub {
+    font-size: 14px;
+    margin-bottom: 30px;
+  }
+
+  /* GRID TEC */
+  .tech-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  /* PROJETOS */
+  .projects-grid {
+    grid-template-columns: 1fr;
+  }
+
+  /* CARDS */
+  .card,
+  .project-card,
+  .tech {
+    width: 100%;
+  }
+
+  /* CONTATO */
+  .contato button {
+    width: 100%;
+    max-width: 280px;
   }
 }
